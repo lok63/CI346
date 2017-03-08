@@ -1,8 +1,8 @@
 # Shift-Management
 
-## TO DO
+### TO DO
 - [ ] Server
 
-##DOING
+###DOING
 
-##FINISHED
+###FINISHED
