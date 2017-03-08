@@ -1,7 +1,13 @@
 # Shift-Management
 
 ### TO DO
-- [ ] Server
+- [ ] Maven
+- [ ] Wildfly
+- [ ] Spring HATEOS API (Backend)
+- [ ] React (Frontend) --nodeJS
+- [ ] Boostrap (Design)
+- [ ] Authentication
+- [ ] PostgreSQL
 
 ### DOING
 
