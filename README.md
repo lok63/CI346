@@ -8,6 +8,7 @@
 * Run the application on localhost:8333
 * The sever will re-direct you automatically to the keycloak's administrator console to log in.
 * Login with username "lc" and for password "lc" 
+* Because i haven't start working on this assignment early, i did not mange to successfully implement the update button
 
 ### References
 To configure keycloack with my application the following tutorial was used as reference
