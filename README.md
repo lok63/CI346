@@ -9,6 +9,10 @@
 * The sever will re-direct you automatically to the keycloak's administrator console to log in.
 * Login with username "lc" and for password "lc" 
 
+### References
+To configure keycloack with my application the following tutorial was used as reference
+
+[Keycloack Tutorial](http://slackspace.de/articles/authentication-with-spring-boot-angularjs-and-keycloak/)
 
 
 
