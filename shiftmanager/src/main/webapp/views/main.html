@@ -1,0 +1,111 @@
+        
+<div class="container">
+
+    <div class="page-content">
+     
+        
+<header>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Shift Application</a>
+            </div>
+            <p class="navbar-text navbar-right" style="margin-right: 5px;">Signed in as {{profile.username}}</p>
+        </div>
+          <button class="btn-warning" name="Logout" ng-click="logout()" style="float: right;">Logout</button>
+        
+    </nav>
+</header>
+
+   
+
+
+<div class="navbar navbar-default">
+    <div>
+        <div class="row">
+            <div class="col-lg-offset-2 col-lg-8">
+
+                
+                <div class="btn-group" role="group" ">
+                    <button ng-click="showForm()" type="button" class="btn btn-info">Add Employee</button>
+                </div>
+
+                <!-- Display employees in a table -->
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>First name</th>
+                        <th>Last name</th>
+                        <th>Day of shift</th>
+                        <th>Period of day</th>
+                        <th style="width: 90px"></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="employee in employees">
+                        <td>{{employee.firstname}}</td>
+                        <td>{{employee.lastname}}</td>
+                        <td>{{employee.days}}</td>
+                        <td>{{employee.shiftTime}}</td>
+                        <td >
+                            <div class="btn btn-group btn-group-vertical">
+                                <button class="btn btn-default" ng-click="updateEmployee(employee.id)">Update</button>
+                                <button class="btn btn-danger " ng-click="remove(employee.id)">Delete</button>
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="navbar navbar-default" ng-show="myvalue">
+    <div class="panel-footer" ><span class="lead">Employee Form </span></div>
+    <div>
+        <div class="formcontainer">
+
+            <form role="form" class ="myForm">
+                <div class="form-group col-sm-2">
+                    <input type="text" placeholder="FirstName" name="firstName"  ng-model="emp.firstname" class=" form-control" />
+                    
+                </div>
+                <div class="form-group col-sm-2">
+                    <input type="text" placeholder="LastName" name="lastName"  ng-model="emp.lastname" class="col-sm-3 form-control" />
+                </div>
+                <div class="form-group col-sm-2">
+                    <select class="col-sm-3 form-control" name="days"  ng-model="emp.days">
+                        <option value="Monday">Monday</option>
+                        <option value="Tuesday">Tuesday</option>
+                        <option value="Wednesday">Wednesday</option>
+                        <option value="Thursday">Thursday</option>
+                        <option value="Firday">Firday</option>
+                    </select>
+                </div>
+                <div class="form-group col-sm-2">
+                    <select class="col-sm-3 form-control" name="shiftTime"  ng-model="emp.shiftTime">
+                        <option value="Day">Day</option>
+                        <option value="Evening">Evening</option>
+                        <option value="Night">Night</option>
+                    </select>
+                </div>
+            </form>
+            <div class="col-sm-1">
+                <button type="button" class="col-sm-12 btn btn-success" ng-click="createEmployee()" id="saveBtn">Save</button>
+            </div>
+            <div class="col-sm-1">
+                <button type="button" class="col-sm-12 btn btn-default" ng-click="cancelbtn()" id="cancelBtn">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+        
+    </div>
+
+</div>
